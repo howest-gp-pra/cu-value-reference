@@ -13,9 +13,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Diagnostics;
-using Prb.ValueReference.CORE;
+using Pra.ValueReference.Core;
 
-namespace Prb.ValueReference.WPF
+namespace Pra.ValueReference.Wpf
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -27,7 +27,7 @@ namespace Prb.ValueReference.WPF
             InitializeComponent();
         }
 
-        private void btnCopyValueType_Click(object sender, RoutedEventArgs e)
+        private void BtnCopyValueType_Click(object sender, RoutedEventArgs e)
         {
             int i = 42;
             int j = i;
@@ -35,7 +35,7 @@ namespace Prb.ValueReference.WPF
             Debug.WriteLine($"i = {i}\nj = {j}");
         }
 
-        private void btnCopyValueTypeEnum_Click(object sender, RoutedEventArgs e)
+        private void BtnCopyValueTypeEnum_Click(object sender, RoutedEventArgs e)
         {
             CarType type1 = CarType.Crossover;
             CarType type2 = type1;
@@ -44,7 +44,7 @@ namespace Prb.ValueReference.WPF
 
         }
 
-        private void btnCopyValueTypeStruct_Click(object sender, RoutedEventArgs e)
+        private void BtnCopyValueTypeStruct_Click(object sender, RoutedEventArgs e)
         {
             Vector3d vector1 = new Vector3d(2, 3, 4);
             Vector3d vector2 = vector1;
@@ -55,7 +55,7 @@ namespace Prb.ValueReference.WPF
             Debug.WriteLine($"Vector2: X = {vector1.X}, Y = {vector1.Y}, Z = {vector1.Z}");
         }
 
-        private void btnCopyReferenceType_Click(object sender, RoutedEventArgs e)
+        private void BtnCopyReferenceType_Click(object sender, RoutedEventArgs e)
         {
             Car car1 = new Car("Honda", CarType.HatchBack, 100M);
             Car car2 = car1;
@@ -63,7 +63,7 @@ namespace Prb.ValueReference.WPF
             Debug.WriteLine($"car 1 speed = {car1.Speed}, car 2 speed = {car2.Speed}");
         }
 
-        private void btnCopyReferenceTypeString_Click(object sender, RoutedEventArgs e)
+        private void BtnCopyReferenceTypeString_Click(object sender, RoutedEventArgs e)
         {
             string string1 = "hello";
             string string2 = string1;
@@ -77,7 +77,7 @@ namespace Prb.ValueReference.WPF
             return number;
         }
 
-        private void btnPassValueType_Click(object sender, RoutedEventArgs e)
+        private void BtnPassValueType_Click(object sender, RoutedEventArgs e)
         {
             int getal1 = 5;
             int getal2 = IncrementNumber(getal1);
@@ -89,7 +89,7 @@ namespace Prb.ValueReference.WPF
             number++;
         }
 
-        private void btnPassValueTypeByRef_Click(object sender, RoutedEventArgs e)
+        private void BtnPassValueTypeByRef_Click(object sender, RoutedEventArgs e)
         {
             int getal1 = 5;
             IncrementNumberRef(ref getal1);
@@ -104,7 +104,7 @@ namespace Prb.ValueReference.WPF
             return true;
         }
 
-        private void btnOutputParameter_Click(object sender, RoutedEventArgs e)
+        private void BtnOutputParameter_Click(object sender, RoutedEventArgs e)
         {
             int numberComingOut = 66;
             bool ok = InitializeMe(out numberComingOut);
@@ -117,7 +117,7 @@ namespace Prb.ValueReference.WPF
             Debug.WriteLine($"Object is a {someObject.GetType().ToString()}, ToString: {someObject.ToString()}");
         }
 
-        private void btnBoxing_Click(object sender, RoutedEventArgs e)
+        private void BtnBoxing_Click(object sender, RoutedEventArgs e)
         {
             int number = 42;
             object boxedNumber = number; //boxing happens implicitly
@@ -132,14 +132,14 @@ namespace Prb.ValueReference.WPF
             PrintObjectAsString(abstractCar);
         }
 
-        private void btnUnboxing_Click(object sender, RoutedEventArgs e)
+        private void BtnUnboxing_Click(object sender, RoutedEventArgs e)
         {
             int number = 42;
             object boxedNumber = number; //boxing
             int unboxed = (int)boxedNumber;
         }
 
-        private void btnSafeCasting_Click(object sender, RoutedEventArgs e)
+        private void BtnSafeCasting_Click(object sender, RoutedEventArgs e)
         {
             int? myNumber = 42;
             object boxedNumber = myNumber;

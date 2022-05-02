@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Prb.ValueReference.CORE
+namespace Pra.ValueReference.Core
 {
     public struct Vector3d
     {
