@@ -79,9 +79,9 @@ namespace Pra.ValueReference.Wpf
 
         private void BtnPassValueType_Click(object sender, RoutedEventArgs e)
         {
-            int getal1 = 5;
-            int getal2 = IncrementNumber(getal1);
-            Debug.WriteLine($"getal1: { getal1}\ngetal2: { getal2}");
+            int number1 = 5;
+            int number2 = IncrementNumber(number1);
+            Debug.WriteLine($"getal1: {number1}\ngetal2: {number2}");
         }
 
         private void IncrementNumberRef(ref int number)
@@ -91,10 +91,10 @@ namespace Pra.ValueReference.Wpf
 
         private void BtnPassValueTypeByRef_Click(object sender, RoutedEventArgs e)
         {
-            int getal1 = 5;
-            IncrementNumberRef(ref getal1);
-            int getal2 = getal1;
-            Debug.WriteLine($"getal1: {getal1}\ngetal2: {getal2}");
+            int number1 = 5;
+            IncrementNumberRef(ref number1);
+            int number2 = number1;
+            Debug.WriteLine($"getal1: {number1}\ngetal2: {number2}");
         }
 
         private bool InitializeMe(out int numberToInitialize)
